@@ -1,0 +1,450 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  height: 580px;
+  width:100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  height: 100vh;
+}
+
+.image-container{
+  position: relative;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 70px;
+  margin-left: 10px;
+}
+.start{
+  margin-top: 6px;
+}
+.middle{
+  display: flex;
+  gap: 30px;
+  margin-top: 12px;
+
+}
+.end{
+  display: flex;
+  gap: 10px;
+}
+
+.signup{
+  font-size: larger;
+  margin-top: 19px;
+  cursor: pointer;
+  
+}
+
+.login{
+  font-size: larger;
+  margin-top: 19px;
+  margin-right:10px ;
+  cursor: pointer;
+
+}
+button{
+  color: white;
+  background-color: rgba(210, 51, 30, 0.938);
+  padding: 10px;
+  border-radius: 10px;
+  border: 0px;
+}
+
+.nav{
+  text-decoration: none;
+  color: black;
+}
+
+.middle > * :hover{
+  color: rgba(210, 51, 30, 0.938);
+  
+}
+.text {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  color: white;
+  font-size: 3rem;
+  z-index: 2;
+  font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Must be above the image */
+}
+
+.spa{
+  font-size: 30px;
+  color: black;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card-container {
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  display: flex;
+  gap: 28px; /* space between cards */
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.card {
+  display: grid;
+  grid-template-areas: 
+    "side side header header"
+    "side side header header"
+    "side side footer footer";
+    
+  background-color: #222; /* optional background */
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.side {
+  grid-area: side;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.37);
+}
+
+.card-container > *:hover{
+  background-color: black;
+}
+
+.about_index{
+  text-align: center;
+}
+
+.matter{
+  margin-left: 80px;
+  margin-right: 80px;
+  font-size: x-large;
+  margin-top: 10px;
+}
+
+.orange{
+  background-color: rgba(255, 68, 0, 0.829);
+  height: 200px;
+  width: 75%;
+  margin-left: 170px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  overflow: visible;
+  margin-top: 90px;
+}
+
+.photo {
+  display: flex;
+  gap: 20px; /* space between images */
+  z-index: 2;
+  justify-content: center;
+  
+}
+.photo img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  
+}
+.photo img:hover {
+  transform: scale(1.05);
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.price{
+  text-align: center;
+  margin-top: 250px;
+}
+.plan-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+
+}
+.plan-card{
+  
+  justify-content: space-around;
+  padding: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 500px;
+  box-shadow:2px 8px 16px 2px rgba(0, 0, 0, 0.4); ;
+}
+.maha{
+  width: 800px;
+  text-align: center;
+  margin-left: 320px;
+  margin-top: 50px;
+}
+
+.active{
+  color: rgba(210, 51, 30, 0.938);
+  
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+  
+}
+
+.Signups {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-left: 2%;
+  box-shadow: 2px 8px 16px 2px rgba(0, 0, 0, 0.822);;
+
+}
+
+.Signups h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #333;
+}
+
+.Signups label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+.Signups input {
+  width: 100%;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.Signups input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.Signups button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.Signups button:hover {
+  background-color: #0056b3;
+}
+
+.otp{
+  
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+input {
+  border-radius: 10px;
+  height: 40px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.712);
+  transition: border-color 0.1s ease;
+  ;
+}
+
+.otp1{
+  margin-left: 47%;
+  margin-top: 20px;
+  width: 100px;
+  font-size: large;
+   box-shadow: 0 0 4px black
+}
+
+input:hover,
+input:focus,
+input:active{
+  border-color: rgba(255, 68, 0, 0.952);
+  outline: none;  
+}
+
+::placeholder{
+  font-size: large;
+  
+}
+
+.login-container{
+  display: inline-flex;
+  flex-direction: column;
+
+  padding: 40px;
+  margin-left: 35%;
+  margin-top: 10%;
+  box-shadow: 0 0 20px black ;
+}
+.login-inside{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 10px;
+}
+
+.login-label{
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 5px;
+}
+.login-button{
+  margin-top: 20px;
+  height: 40px;
+  width: 80px;
+  font-size: large;
+}
+.Age-container{
+  display: inline-flex;
+  border: 1px solid navy;
+  padding: 40px;
+  margin-left: 36%;
+  margin-top: 10%;
+  box-shadow:0 0 20px black ;
+}
+.Age-no{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Age-no{
+  margin-top: 10px;
+}
+.Age-button{
+  font-size: larger;
+  font-weight: 800;
+}
+.Age-label{
+  font-size: 70px
+}
+
+.error{
+  margin-left: 44%;
+}
+.signup-container1{
+  margin-top: 50px;
+  margin-left: 30%;
+}
+.workout-container {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.workout-reset-button {
+  background-color: #ff4655;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+.workout-reset-button:hover {
+  background-color: #e03e4d;
+}
+
+.workout-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ff4655;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.workout-card {
+  background: #2a2a2a;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border-left: 5px solid #ff4655;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 70, 85, 0.6);
+}
+
+.workout-day,
+.workout-muscle {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffa07a;
+}
+
+.workout-exercises-heading {
+  font-size: 1.2rem;
+  color: #ffda77;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.workout-exercise {
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-bottom: 6px;
+}
+
+.workout-divider {
+  margin-top: 20px;
+  border: 0;
+  height: 1px;
+  background: #444;
+}
