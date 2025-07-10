@@ -26,7 +26,7 @@ export const signup = async (req, res) => {
     return res.status(400).json({ message: "Password must have minimum of 5 letters" });
   }
   if(role === "admin"){
-    return res.status(400).josn({
+    return res.status(400).json({
       message:"Admin can't be signup here , Please login has a User"
     })
   }
