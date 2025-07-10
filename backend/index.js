@@ -15,8 +15,8 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(express.urlencoded({extended:true}))
 app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true, // Needed for cookies, authorization headers, etc.
+  origin: 'https://fit-core-full-stack-gym-project.vercel.app', // ✅ your deployed frontend
+  credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
