@@ -7,7 +7,6 @@ import router from "./route/User.routes.js";
 import cookieParser from "cookie-parser";
 
 dotenv.config();
-db();
 
 const app = express();
 
@@ -40,6 +39,16 @@ app.get('/', (req, res) => {
 });
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log("Server is started at port", port);
-});
+
+async function startServer() {
+  try {
+    await db(); // WAIT for DB connection first
+    app.listen(port, () => {
+      console.log(`Server is started at port ${port}`);
+    });
+  } catch (error) {
+    console.error("Failed to connect to DB, server not started", error);
+  }
+}
+
+startServer();
