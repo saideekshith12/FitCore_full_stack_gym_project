@@ -19,6 +19,6 @@ router.post('/admin', AdminSignup)
 router.post('/workout',  Workout_deatils)
 router.post('/userage',authMiddleware , userage )
 router.post('/adminlogin', Adminlogin)
-router.post('/Workout_details', Workout_deatils)
+router.post('/Workout-details', Workout_deatils)
 
 export default router
