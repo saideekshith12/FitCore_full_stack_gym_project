@@ -460,6 +460,9 @@ input:active{
   .desktop-view {
     display: none;
   }
+  .image-container{
+    display: none;
+  }
 
   .mobile-view {
     display: block;
