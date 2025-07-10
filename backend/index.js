@@ -18,7 +18,7 @@ const allowedOrigins = [
   'https://fit-core-full-stack-gym-project.vercel.app', // your frontend URL
 ];
 
-app.use(cors({
+app.use('*',cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true)
@@ -31,7 +31,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-app.options('*', cors());
 // Handle preflight requests
 
 app.use(helmet())
