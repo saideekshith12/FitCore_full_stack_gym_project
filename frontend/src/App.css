@@ -448,3 +448,20 @@ input:active{
   height: 1px;
   background: #444;
 }
+.desktop-view {
+  display: block;
+}
+.mobile-view {
+  display: none;
+}
+
+/* On small screens (767px and below): Hide desktop, show mobile */
+@media (max-width: 767px) {
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+}
