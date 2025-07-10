@@ -25,6 +25,11 @@ export const signup = async (req, res) => {
   if (password.length <= 5) {
     return res.status(400).json({ message: "Password must have minimum of 5 letters" });
   }
+  if(role === "admin"){
+    return res.status(400).josn({
+      message:"Admin can't be signup here , Please login has a User"
+    })
+  }
 
   try {
     const existingUser = await User.findOne({ email });
