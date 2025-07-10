@@ -60,7 +60,7 @@ function RouteComponent() {
           <input className='login-input' type="text"
           value={password}
           onChange={(e)=>setpassword(e.target.value)}
-          placeholder ='Enter your email' />
+          placeholder ='Enter your password' />
         </div>
         <div>
           <button className='login-button' type='submit'>Login</button>
