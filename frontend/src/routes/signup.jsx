@@ -30,11 +30,17 @@ function RouteComponent() {
       setloading(false)
       return
     }
-    if (role !== 'user' && role !== 'admin') {
+    if (role !== 'user') {
       seterror('Check the role field')
       setloading(false)
       return
     }
+      if (role === 'admin') {
+      seterror('Admin cannot sign up here')
+      setloading(false)
+      return
+    }
+
 
     try {
       const data = await fetch('https://fitcore-full-stack-gym-project.onrender.com/api/users/signup', {
