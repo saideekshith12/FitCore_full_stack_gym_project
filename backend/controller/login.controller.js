@@ -34,12 +34,12 @@ const login = async (req, res) => {
       }
     );
 
-    res.cookie("token", token, {
-      httpOnly: true,
-      secure: false, // Set to true only if using HTTPS in production
-      sameSite: "Lax",
-      maxAge: 3600000, // 1 hour in milliseconds
-    });
+  res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,           // ✅ REQUIRED for HTTPS (Vercel + Render)
+  sameSite: "None",       // ✅ REQUIRED for cross-origin cookies
+  maxAge: 3600000         // 1 hour
+});
 
     return res.status(200).json({
       message: "Login successful",
