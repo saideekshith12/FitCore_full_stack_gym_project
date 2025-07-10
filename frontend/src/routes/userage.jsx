@@ -32,7 +32,7 @@ function RouteComponent() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/users/userage", {
+      const res = await fetch("https://fitcore-full-stack-gym-project.onrender.com/api/users/userage", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

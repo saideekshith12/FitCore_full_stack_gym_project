@@ -16,7 +16,7 @@ function RouteComponent() {
   const handlelogin= async (e)=>{
     e.preventDefault();
     try {
-      const data = await fetch("http://localhost:5000/api/users/login",{
+      const data = await fetch("https://fitcore-full-stack-gym-project.onrender.com/api/users/login",{
         method:"POST",
         headers:{
           'Content-Type':"application/json",

@@ -19,7 +19,7 @@ function RouteComponent() {
     seterror(null)
 
     try {
-      const data = await fetch("http://localhost:5000/api/users/admin", {
+      const data = await fetch("https://fitcore-full-stack-gym-project.onrender.com/api/users/admin", {
         method: "POST",
         headers: {
           'Content-Type': "application/json",
