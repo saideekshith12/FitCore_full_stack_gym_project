@@ -11,13 +11,11 @@ db();
 
 const app = express();
 
-// ✅ Load middlewares first
 app.use(helmet());
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ Setup CORS options
 const allowedOrigins = ['https://fit-core-full-stack-gym-project.vercel.app'];
 
 const corsOptions = {
@@ -33,21 +31,14 @@ const corsOptions = {
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
-// ✅ Use CORS (must come before routes)
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); // ✅ Correct
 
-// ✅ Explicitly handle preflight requests (only needed in some edge cases)
-app.options('*', cors(corsOptions));  // Don't just pass cors() here!
-
-// ✅ Routes
 app.use("/api/users", router);
 
-// ✅ Root route
 app.get('/', (req, res) => {
   res.send("Server is started");
 });
 
-// ✅ Listen
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log("Server is started at port", port);
