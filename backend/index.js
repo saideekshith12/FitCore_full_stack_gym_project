@@ -20,6 +20,12 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+app.options('*', cors({
+  origin: 'https://fit-core-full-stack-gym-project.vercel.app',
+  credentials: true
+}));
+
 app.use(helmet())
 
 const port = process.env.PORT || 5000
