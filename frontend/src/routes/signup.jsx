@@ -30,13 +30,8 @@ function RouteComponent() {
       setloading(false)
       return
     }
-    if (role !== 'user') {
-      seterror('Check the role field')
-      setloading(false)
-      return
-    }
       if (role === 'admin') {
-      seterror('Admin cannot sign up here')
+      seterror('Admin cannot sign up here, Only User can Sign up Here')
       setloading(false)
       return
     }
